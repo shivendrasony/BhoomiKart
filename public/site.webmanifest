@@ -1,0 +1,16 @@
+{
+  "name": "BhoomiKart",
+  "short_name": "BhoomiKart",
+  "description": "Find your perfect property with BhoomiKart - India's leading real estate platform",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "32x32 192x192 512x512"
+    }
+  ],
+  "theme_color": "#059669",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+} 
