@@ -509,11 +509,7 @@ const agents = [
   }
 ]
 
-interface AgentPageParams {
-  id: string
-}
-
-export default function AgentDetailPage({ params }: { params: AgentPageParams }) {
+export default function AgentDetailPage({ params }: { params: { id: string } }) {
   const agent = agents.find((a) => a.id === Number.parseInt(params.id)) || agents[0]
   const [messageSubmitted, setMessageSubmitted] = useState(false)
 
