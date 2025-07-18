@@ -12,6 +12,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { FormEvent } from "react"
+import { useParams } from "next/navigation"
 
 // Sample agents data
 const agents = [
@@ -509,8 +510,9 @@ const agents = [
   }
 ]
 
-export default function AgentDetailPage({ params }: { params: { id: string } }) {
-  const agent = agents.find((a) => a.id === Number.parseInt(params.id)) || agents[0]
+export default function AgentDetailPage() {
+  const params = useParams();
+  const agent = agents.find((a) => a.id === Number.parseInt((params.id ?? "") as string)) || agents[0]
   const [messageSubmitted, setMessageSubmitted] = useState(false)
 
   // Format price to Indian Rupees
